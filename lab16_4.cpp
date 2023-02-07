@@ -17,3 +17,17 @@ int main(){
 	
 	return 0;
 }
+
+void shuffle(int &a,int &b,int &c,int &d){
+	int data[] = {a,b,c,d};
+	a = data[rand()%4];
+	do{
+		b = data[rand()%4];
+	}while(b == a);
+	do{
+		c = data[rand()%4];
+	}while(c == a || c == b);
+	do{
+		d = data[rand()%4];
+	}while(d == a || d == b || d == c);
+}
